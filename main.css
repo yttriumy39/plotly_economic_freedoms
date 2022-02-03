@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Plotly.js
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+/* PLotly.js
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* plotly.js's modebar's z-index is 1001 by default
+ * https://github.com/plotly/plotly.js/blob/7e4d8ab164258f6bd48be56589dacd9bdd7fded2/src/css/_modebar.scss#L5
+ * In case a dropdown is above the graph, the dropdown's options
+ * will be rendered below the modebar
+ * Increase the select option's z-index
+ */
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) and (max-width: 549px) {
+    .container {
+        width: 85%;
+        padding: 0;
+    }
+}
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+    font-size: 18px;
+    background-color: #1f2630;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0;
+}
+
+main_div {
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #7fafdf;
+    background-color: #1f2630;
+    margin: 0;
+    max-width: 1200px;
+}
+
+#root {
+    margin: 0;
+}
+
+@media (max-width: 550px) {
+    #root {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 551px) {
+    #root {
+        padding: 5rem;
+    }
+}
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#header {
+    right: 800px;
+    max-width: 1200px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 30px;
+    color: #7fafdf;
+    letter-spacing: -.1rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 1.25;
+    color: #7fafdf ;
+    background-color: #252e3f;
+    margin-bottom: 1.8rem;
+    margin-top: 1.8rem;
+    border-left: #2cfec1 solid 1rem;
+    padding-left: 1rem;
+    max-width: 1000px;
+    margin: 2rem 0 3rem 0;
+    right: 800px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #7fafdf ;
+    background-color: #252e3f;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 4rem;
+    line-height: 1.35;
+    letter-spacing: -.08rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+h5 {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    letter-spacing: -.05rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+h6 {
+    font-size: 2.0rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+p {
+    margin-top: 0;
+    color:#7fafdf
+}
+
+
+
+
+
+
+
+
+
+/* Blockquotes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+blockquote {
+    border-left: 4px lightgrey solid;
+    padding-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+}
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+    color: #1EAEDB;
+    text-decoration: underline;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+}
+
+a:hover {
+    color: #0FA0CE;
+}
+
+#Kaggle {
+    left: 50px;
+}
+
+#Heritage {
+    left: 300px;
+}
+
+/* Displays
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#status-container {
+   position: absolute;
+   top: 150px;
+   right: 80px;
+   width: 800px;
+}
+
+#region-rank {
+   position: absolute;
+   top: 0px;
+   right: 350px;
+}
+
+#in-region-rank {
+   position:absolute;
+   top: 0px;
+   right: 0px;
+}
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+    margin-bottom: 0;
+}
+
+input,
+textarea,
+select,
+fieldset {
+    margin-bottom: 0;
+}
+
+pre,
+dl,
+figure,
+table,
+form {
+    margin-bottom: 0;
+}
+
+p,
+ul,
+ol {
+    margin-bottom: 0.75rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.u-pull-right {
+    float: right;
+}
+
+.u-pull-left {
+    float: left;
+}
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid #E1E1E1;
+}
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Graph
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#graph-container-1 {
+    background-color: #252e3f;
+    padding: 5px;
+    margin: 0;
+}
+
+#graph-container-2 {
+    background-color: #252e3f;
+    padding: 5px;
+    margin: 0;
+}
+
+#graph-container-3 {
+    background-color: #252e3f;
+    padding: 5px;
+    margin: 0;
+}
+
+@media (max-width: 1250px) {
+    /*For mobile and smaller screens*/
+    #header h4 {
+        text-align: center;
+    }
+
+    #graph-container {
+        margin-top: 5rem;
+    }
+
+    #selected-data {
+        height: 55rem;
+    }
+}
+
+@media (min-width: 1251px) {
+    /*For desktop*/
+    #logo {
+        float: right;
+        padding-right: 2rem;
+    }
+
+    #header p {
+        font-size: 1.5rem;
+    }
+
+    #graph-container {
+        flex: 4 40%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    #selected-data {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    #graph-container {
+        padding: 2.5rem;
+    }
+
+    #selected-data .xtick text{
+        font-size: 1.1rem !important;
+    }
+
+    #selected-data .gtitle{
+        font-size: 1.7rem !important;
+    }
+}
+
+
+#CountryDropdown {
+    margin-bottom: 6.6rem;
+    max-width: 1000px;
+    position: relative;
+    width: 800px; 
+}
+
+/* Dropdown
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.Select-value {
+    cursor: pointer;
+    position: relative;
+}
+
+.Select-control {
+    color: #7fafdf !important;
+}
+
+
+.Select {
+    color: #7fafdf !important;
+}
+
+.Select-menu-outer {
+    background-color: #252e3f !important;
+    border: 1px solid #7fafdf !important;
+}
+
+.Select div {
+    background-color: #252e3f !important;
+}
+
+.Select-menu-outer div:hover {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    cursor: pointer;
+}
+
+.Select-value-label {
+    color: #7fafdf !important;
+    left: 0px;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    border: 1px solid #7fafdf !important;
+    border-radius: 4px !important;
+}
+
+/* Placement
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (max-width: 1250px) {
+    /*For mobile and smaller screens*/
+    #app-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 1251px) {
+    /*For desktop*/
+    #app-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 100rem;
+        margin-bottom: 5rem;
+    }
+}
+
+#header {
+    margin-left: 1.5%;
+}
+
+
+div, svg {
+    user-select: none !important;
+}
+
+._dash-undo-redo {
+    display: none;
+}
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
