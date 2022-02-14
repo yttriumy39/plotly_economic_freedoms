@@ -13,7 +13,7 @@ import plotly.express as px
 import dash_daq as daq
    
 
-df = pd.read_csv(r'C:\Users\alijl\Documents\jupyterdocuments\economicfreedom\economic_freedom_index2019_data.csv', encoding = 'latin-1')
+df = pd.read_csv(r'economic_freedom_index2019_data.csv', encoding = 'latin-1')
 
 df.columns = ['CountryID', 'Country Name', 'WEBNAME', 'Region', 'World Rank',
         'Region Rank', '2019 Score', 'Property Rights', 'Judical Effectiveness',
